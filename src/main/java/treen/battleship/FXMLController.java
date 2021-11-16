@@ -1,8 +1,8 @@
 package treen.battleship;
 /*
-Put header here
-
-
+Charley Treen
+November 16th
+Program mini game
  */
 
 import java.net.URL;
