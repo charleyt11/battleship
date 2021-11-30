@@ -1,11 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="treen.battleship.FXMLController">
-    <children>
-        <Button layoutX="128.0" layoutY="107.0" onAction="#btnClickAction" text="Click Me!" />
-        <Label fx:id="lblOut" layoutX="53.0" layoutY="30.0" minHeight="16" minWidth="69" prefHeight="52.0" prefWidth="215.0" />
-    </children>
+<AnchorPane fx:id="shapeScores" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="609.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="treen.battleship.FXMLController">
+   <children>
+      <Rectangle fx:id="shapeBoard" arcHeight="5.0" arcWidth="5.0" fill="#c8a3dd" height="418.0" layoutX="-1.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
+      <Label fx:id="lblGraph" layoutX="116.0" layoutY="49.0" text="A" />
+      <Label fx:id="lblGraph" layoutX="214.0" layoutY="49.0" text="C" />
+      <Label fx:id="lblGraph" layoutX="313.0" layoutY="49.0" text="E" />
+      <Label fx:id="lblGraph" layoutX="166.0" layoutY="49.0" text="B" />
+      <Label fx:id="lblGraph" layoutX="258.0" layoutY="49.0" text="D" />
+      <Label fx:id="lblGraph" layoutX="79.0" layoutY="75.0" text="0">
+         <font>
+            <Font name="Bookman Old Style" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGraph" layoutX="82.0" layoutY="177.0" text="2" />
+      <Label fx:id="lblGraph" layoutX="82.0" layoutY="233.0" text="3" />
+      <Label fx:id="lblGraph" layoutX="79.0" layoutY="123.0" prefHeight="17.0" prefWidth="0.0" text="1" />
+      <Label fx:id="lblGraph" layoutX="82.0" layoutY="282.0" text="4" />
+      <Rectangle fx:id="shapeE4" arcHeight="5.0" arcWidth="5.0" fill="#fffcb2" height="38.0" layoutX="294.0" layoutY="272.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeD0" arcHeight="5.0" arcWidth="5.0" fill="#1fd1ff" height="38.0" layoutX="244.0" layoutY="72.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeE2" arcHeight="5.0" arcWidth="5.0" fill="#f5cee6" height="38.0" layoutX="295.0" layoutY="173.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeE0" arcHeight="5.0" arcWidth="5.0" fill="#729abf" height="38.0" layoutX="295.0" layoutY="72.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeD1" arcHeight="5.0" arcWidth="5.0" fill="#be95c3" height="38.0" layoutX="244.0" layoutY="121.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeC0" arcHeight="5.0" arcWidth="5.0" fill="#fbffab" height="38.0" layoutX="195.0" layoutY="72.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeC3" arcHeight="5.0" arcWidth="5.0" fill="#c67dd3" height="38.0" layoutX="196.0" layoutY="223.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeC4" arcHeight="5.0" arcWidth="5.0" fill="#c7f8ba" height="38.0" layoutX="195.0" layoutY="272.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeE3" arcHeight="5.0" arcWidth="5.0" fill="#ffc004" height="38.0" layoutX="294.0" layoutY="223.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeB0" arcHeight="5.0" arcWidth="5.0" fill="#ffd1fa" height="38.0" layoutX="147.0" layoutY="72.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeD2" arcHeight="5.0" arcWidth="5.0" fill="#8ff897" height="38.0" layoutX="244.0" layoutY="173.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeB3" arcHeight="5.0" arcWidth="5.0" fill="#ffd3f3" height="38.0" layoutX="147.0" layoutY="223.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeD4" arcHeight="5.0" arcWidth="5.0" fill="#f8cdee" height="38.0" layoutX="244.0" layoutY="272.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeB1" arcHeight="5.0" arcWidth="5.0" fill="#67eb9e" height="38.0" layoutX="147.0" layoutY="121.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeC2" arcHeight="5.0" arcWidth="5.0" fill="#1fd4ff" height="38.0" layoutX="195.0" layoutY="173.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeC1" arcHeight="5.0" arcWidth="5.0" fill="#ffb51f" height="38.0" layoutX="195.0" layoutY="121.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeE1" arcHeight="5.0" arcWidth="5.0" fill="#78dd82" height="38.0" layoutX="294.0" layoutY="121.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeD3" arcHeight="5.0" arcWidth="5.0" fill="#5e96c9" height="38.0" layoutX="244.0" layoutY="223.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeB4" arcHeight="5.0" arcWidth="5.0" fill="#ffbb1f" height="38.0" layoutX="147.0" layoutY="272.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeA3" arcHeight="5.0" arcWidth="5.0" fill="#96f5ac" height="38.0" layoutX="97.0" layoutY="223.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeA1" arcHeight="5.0" arcWidth="5.0" fill="#1fe9ff" height="38.0" layoutX="97.0" layoutY="121.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeB2" arcHeight="5.0" arcWidth="5.0" fill="#71a7c9" height="38.0" layoutX="147.0" layoutY="173.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeA4" arcHeight="5.0" arcWidth="5.0" fill="#ffffb3" height="38.0" layoutX="97.0" layoutY="272.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeA0" arcHeight="5.0" arcWidth="5.0" fill="#d9a7e1" height="38.0" layoutX="97.0" layoutY="72.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Rectangle fx:id="shapeA2" arcHeight="5.0" arcWidth="5.0" fill="#fdff94" height="38.0" layoutX="97.0" layoutY="173.0" onMouseClicked="#spot" stroke="BLACK" strokeType="INSIDE" width="45.0" />
+      <Label fx:id="lblBattle" layoutX="246.0" layoutY="14.0" prefHeight="32.0" prefWidth="135.0" text="Battleship">
+         <font>
+            <Font name="Agency FB Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWon" layoutX="27.0" layoutY="41.0">
+         <font>
+            <Font name="Bookman Old Style Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGraph" layoutX="14.0" layoutY="361.0" prefHeight="38.0" prefWidth="391.0" text="Instructions: Sink the 3 boats to win! Don't run out of misses!">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMisses" layoutX="405.0" layoutY="228.0" prefHeight="32.0" prefWidth="48.0">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="478.0" layoutY="11.0" prefHeight="38.0" prefWidth="126.0" text="0">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStart" layoutX="28.0" layoutY="124.0" prefHeight="107.0" prefWidth="532.0" style="-fx-background-color: black;" text="Please type in your game name, then press &quot;ok&quot; to start" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnOk" layoutX="505.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnOk" style="-fx-background-color: pink;" text="ok" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtName" layoutX="240.0" layoutY="195.0" prefHeight="32.0" prefWidth="258.0" />
+      <Label fx:id="lblWon" layoutX="186.0" layoutY="315.0" prefHeight="32.0" prefWidth="183.0" />
+      <Label layoutX="353.0" layoutY="225.0" prefHeight="38.0" prefWidth="48.0" text="Misses:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="267.0" prefHeight="30.0" prefWidth="35.0" text="Hits:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHits" layoutX="405.0" layoutY="275.0" prefHeight="32.0" prefWidth="48.0" />
+      <Label layoutX="421.0" layoutY="17.0" prefHeight="26.0" prefWidth="48.0" text="Time:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
